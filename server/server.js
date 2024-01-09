@@ -9,7 +9,7 @@ dotenv.config()
  app.use(express.json());
  app.use(cors());
 
- const port=5000;
+ const port=process.env.PORT||5000;
 
  const connectionString=process.env.MONGO_URL;
  mongoose.connect(connectionString).then(()=>console.log('Connected to the database')).catch((err)=>console.log('Connection Error',err));
