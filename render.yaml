@@ -1,7 +1,8 @@
 services:
-  - name: backend
-    buildCommand: npm install && npm run build
-    startCommand: npm start
-    env:
-      - key: NODE_ENV
-        value: production
+  - name: server
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+
+  - name: client
+    buildCommand: cd frontend && npm install && npm run build
+    startCommand: cd frontend && npm install -g serve && serve -s build
