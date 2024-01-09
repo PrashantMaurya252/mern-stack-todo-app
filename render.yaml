@@ -1,8 +1,8 @@
 services:
   - name: server
-    buildCommand: cd backend && npm install
-    startCommand: cd backend && npm start
+    buildCommand: cd server && npm install
+    startCommand: cd server && npm start
 
   - name: client
-    buildCommand: cd frontend && npm install && npm run build
-    startCommand: cd frontend && npm install -g serve && serve -s build
+    buildCommand: cd client && npm install && npm run build
+    startCommand: cd client && npm install -g serve && serve -s build
